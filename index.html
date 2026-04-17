@@ -1016,6 +1016,18 @@ footer a:hover { color: var(--gold); }
   z-index: 1;
 }
 
+.ig-avatar-photo {
+  position: absolute;
+  inset: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 1;
+  background: var(--dark2);
+}
+
 .ig-info { flex: 1; min-width: 0; }
 
 .ig-handle {
@@ -1168,7 +1180,7 @@ footer a:hover { color: var(--gold); }
       <a href="https://www.instagram.com/dra.isaadoraaraujo/" target="_blank" rel="noopener" class="ig-badge">
         <div class="ig-avatar">
           <div class="ig-ring"></div>
-          <div class="ig-avatar-inner">IA</div>
+          <img src="img/ig-profile.jpg" alt="Dra. Isadora Araujo" class="ig-avatar-photo" loading="lazy">
         </div>
         <div class="ig-info">
           <div class="ig-handle">@dra.isaadoraaraujo <span class="ig-verified">✓</span></div>
