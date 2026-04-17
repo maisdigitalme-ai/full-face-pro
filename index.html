@@ -893,6 +893,36 @@ footer a:hover { color: var(--gold); }
   .title { font-size: 28px; }
 }
 
+/* ===== HERO SCROLL HINT ===== */
+.hero-scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--gray);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  animation: fade-bounce 2s ease-in-out infinite;
+}
+
+.hero-arrow {
+  font-size: 18px;
+  color: var(--gold);
+  animation: bounce-arrow 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes fade-bounce {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
 /* ===== VIDEO TAG ===== */
 .video-tag {
   display: inline-flex;
@@ -1121,11 +1151,9 @@ footer a:hover { color: var(--gold); }
         <span class="atag">+21 Cursos</span>
         <span class="atag">Posgrado AOF</span>
       </div>
-      <a href="#comprar" class="cta-primary">▶ RESERVAR MI PLAZA AHORA</a>
-      <div class="trust-row">
-        <span>🔒 Pago seguro</span>
-        <span>✅ Garantía 30 días</span>
-        <span>📱 Acceso inmediato</span>
+      <div class="hero-scroll-hint">
+        <span>Descubre el programa</span>
+        <span class="hero-arrow">↓</span>
       </div>
     </div>
     <div class="hero-right">
