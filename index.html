@@ -2,318 +2,254 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>Full Face Pro — Dra. Isadora Araujo</title>
+<meta name="description" content="Curso online de armonización facial práctica con la Dra. Isadora Araujo. Técnicas reales desde el consultorio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--gold:#c4a265;--gold-light:#d4b87a;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--dark4:#222;--text:#f5f0eb;--text-muted:#9a9590;--rose:#c97b7b;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif}
+:root{--gold:#c4a265;--gold-light:#d4b87a;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--text:#f5f0eb;--text-muted:#9a9590;--border:rgba(255,255,255,.06);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
-body{background:var(--dark);color:var(--text);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
-img{max-width:100%;display:block}
+body{background:var(--dark);color:var(--text);font-family:var(--sans);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img{max-width:100%;display:block;height:auto}
 a{color:var(--gold);text-decoration:none}
-
-.btn{display:inline-block;background:var(--gold);color:#0a0a0a;font-family:var(--sans);font-weight:600;font-size:1rem;padding:18px 48px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
-.btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(196,162,101,.3)}
-.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-.btn-outline:hover{background:var(--gold);color:#0a0a0a}
-
-.section{padding:100px 20px}
-.container{max-width:1100px;margin:0 auto}
-.tag{display:inline-block;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(196,162,101,.3);padding:6px 18px;margin-bottom:20px}
-.section-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:500;line-height:1.2;margin-bottom:20px}
-.section-sub{color:var(--text-muted);font-size:1.05rem;max-width:600px;line-height:1.8}
+.btn{display:inline-block;background:var(--gold);color:#0a0a0a;font-family:var(--sans);font-weight:600;font-size:.88rem;padding:16px 40px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;text-align:center}
+.btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(196,162,101,.25)}
+.section{padding:80px 20px}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.tag{display:inline-block;font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(196,162,101,.3);padding:5px 14px;margin-bottom:16px}
+.section-title{font-family:var(--serif);font-size:2rem;font-weight:500;line-height:1.25;margin-bottom:16px}
+.section-sub{color:var(--text-muted);font-size:.95rem;max-width:600px;line-height:1.8}
 .gold{color:var(--gold)}
-.divider{width:60px;height:1px;background:var(--gold);margin:30px 0}
-
-/* ===== TOPBAR ===== */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 30px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(196,162,101,.1);transition:all .3s}
-.topbar-brand{font-family:var(--serif);font-size:1.1rem;letter-spacing:2px;color:var(--text)}
-.topbar-cta{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding:10px 24px;border:1px solid rgba(196,162,101,.4);transition:all .3s}
+.divider{width:50px;height:1px;background:var(--gold);margin:24px 0}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(196,162,101,.1)}
+.topbar-brand{font-family:var(--serif);font-size:.95rem;letter-spacing:2px;color:var(--text)}
+.topbar-brand em{font-style:italic;color:var(--gold)}
+.topbar-cta{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding:8px 16px;border:1px solid rgba(196,162,101,.4);transition:all .3s;white-space:nowrap}
 .topbar-cta:hover{background:var(--gold);color:#0a0a0a}
-
-/* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:80px}
+.hero{min-height:100vh;min-height:100dvh;display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 20px 60px}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:top center;opacity:.35}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.95) 0%,rgba(10,10,10,.7) 50%,rgba(10,10,10,.3) 100%)}
-.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0 30px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
-.hero-text{max-width:520px}
-.hero-label{font-size:.7rem;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px}
-.hero-label::before{content:'';width:40px;height:1px;background:var(--gold)}
-.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,4.2rem);font-weight:500;line-height:1.08;margin-bottom:16px;letter-spacing:-1px}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:top center;opacity:.3}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.97) 0%,rgba(10,10,10,.85) 40%,rgba(10,10,10,.5) 100%)}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;width:100%}
+.hero-text{max-width:560px}
+.hero-label{font-size:.65rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hero-label::before{content:'';width:30px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-size:clamp(1.8rem,5vw,3.2rem);font-weight:500;line-height:1.1;margin-bottom:16px;letter-spacing:-0.5px}
 .hero h1 em{font-style:italic;color:var(--gold)}
-.hero-desc{color:var(--text-muted);font-size:1.05rem;margin-bottom:12px;line-height:1.8}
-.hero-highlight{color:var(--text);font-size:1rem;margin-bottom:36px;padding-left:16px;border-left:2px solid var(--gold)}
-.hero-price{display:flex;align-items:baseline;gap:12px;margin-bottom:36px}
-.hero-price .old{color:var(--text-muted);text-decoration:line-through;font-size:1.1rem}
-.hero-price .new{font-family:var(--serif);font-size:2.6rem;font-weight:600;color:var(--gold)}
-.hero-price .currency{font-size:1rem;color:var(--text-muted)}
-.hero-img-wrapper{display:flex;justify-content:center}
-.hero-img-wrapper img{max-height:85vh;width:auto;object-fit:contain}
-
-/* ===== PAIN POINTS ===== */
+.hero-desc{color:var(--text-muted);font-size:.95rem;margin-bottom:10px;line-height:1.8}
+.hero-highlight{color:var(--text);font-size:.9rem;margin-bottom:28px;padding-left:14px;border-left:2px solid var(--gold);line-height:1.6}
+.hero-price{display:flex;align-items:baseline;gap:10px;margin-bottom:28px;flex-wrap:wrap}
+.hero-price .old{color:var(--text-muted);text-decoration:line-through;font-size:1rem}
+.hero-price .new{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.4rem);font-weight:600;color:var(--gold)}
+.hero-price .currency{font-size:.85rem;color:var(--text-muted)}
 .pain{background:var(--dark2)}
-.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px}
-.pain-card{padding:36px 30px;border:1px solid rgba(255,255,255,.06);background:var(--dark3);position:relative;transition:all .4s}
-.pain-card:hover{border-color:rgba(196,162,101,.3);transform:translateY(-4px)}
-.pain-card .icon{font-size:1.8rem;margin-bottom:16px}
-.pain-card h3{font-family:var(--serif);font-size:1.15rem;margin-bottom:10px;font-weight:500}
-.pain-card p{color:var(--text-muted);font-size:.92rem}
-
-/* ===== DIFFERENTIATOR ===== */
-.diff{position:relative}
-.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:50px}
-.diff-visual{position:relative}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
+.pain-card{padding:28px 24px;border:1px solid var(--border);background:var(--dark3);transition:all .4s}
+.pain-card:hover{border-color:rgba(196,162,101,.3)}
+.pain-card .icon{font-size:1.4rem;margin-bottom:12px;color:var(--gold)}
+.pain-card h3{font-family:var(--serif);font-size:1.05rem;margin-bottom:8px;font-weight:500}
+.pain-card p{color:var(--text-muted);font-size:.85rem;line-height:1.7}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-top:40px}
 .diff-visual img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.diff-visual::after{content:'';position:absolute;inset:0;border:1px solid rgba(196,162,101,.2);transform:translate(12px,12px);pointer-events:none}
 .diff-list{list-style:none}
-.diff-list li{padding:20px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:16px;align-items:flex-start}
-.diff-list li .check{color:var(--gold);font-size:1.2rem;flex-shrink:0;margin-top:2px}
-.diff-list li h4{font-size:1rem;font-weight:600;margin-bottom:4px}
-.diff-list li p{color:var(--text-muted);font-size:.9rem}
-
-/* ===== BEFORE/AFTER ===== */
+.diff-list li{padding:16px 0;border-bottom:1px solid var(--border);display:flex;gap:14px;align-items:flex-start}
+.diff-list li .check{color:var(--gold);font-size:1.1rem;flex-shrink:0;margin-top:3px}
+.diff-list li h4{font-size:.95rem;font-weight:600;margin-bottom:4px}
+.diff-list li p{color:var(--text-muted);font-size:.85rem;line-height:1.6}
 .results{background:var(--dark2)}
-.ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:50px}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
 .ba-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:all .4s;filter:brightness(.95)}
-.ba-grid img:hover{filter:brightness(1.05);transform:scale(1.02)}
-
-/* ===== MODULES ===== */
-.modules-list{margin-top:50px;max-width:700px}
-.mod-item{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:24px;align-items:flex-start}
-.mod-num{font-family:var(--serif);font-size:2rem;color:rgba(196,162,101,.4);font-weight:600;flex-shrink:0;width:50px}
-.mod-item h3{font-size:1.05rem;font-weight:600;margin-bottom:6px}
-.mod-item p{color:var(--text-muted);font-size:.9rem}
-
-/* ===== ABOUT ===== */
+.ba-grid img:hover{filter:brightness(1.05)}
+.modules-list{margin-top:40px;max-width:700px}
+.mod-item{padding:22px 0;border-bottom:1px solid var(--border);display:flex;gap:18px;align-items:flex-start}
+.mod-num{font-family:var(--serif);font-size:1.6rem;color:rgba(196,162,101,.4);font-weight:600;flex-shrink:0;width:40px}
+.mod-item h3{font-size:.95rem;font-weight:600;margin-bottom:4px}
+.mod-item p{color:var(--text-muted);font-size:.85rem;line-height:1.6}
 .about{background:var(--dark2)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:50px}
-.about-img{position:relative}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-top:40px}
 .about-img img{width:100%;object-fit:cover}
-.about-stats{display:flex;gap:30px;margin-top:30px}
+.about-stats{display:flex;gap:24px;margin-top:24px;flex-wrap:wrap}
 .stat{text-align:center}
-.stat-num{font-family:var(--serif);font-size:2rem;color:var(--gold);font-weight:600}
-.stat-label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
-.ig-card{margin-top:40px;padding:20px 24px;background:var(--dark3);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:16px}
-.ig-avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
-.ig-info{flex:1}
-.ig-handle{font-weight:600;font-size:.95rem}
-.ig-followers{color:var(--text-muted);font-size:.82rem}
-.ig-badge{background:var(--gold);color:#0a0a0a;font-size:.7rem;padding:4px 10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
-
-/* ===== PRICING ===== */
+.stat-num{font-family:var(--serif);font-size:1.6rem;color:var(--gold);font-weight:600}
+.stat-label{font-size:.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+.ig-card{margin-top:30px;padding:16px 20px;background:var(--dark3);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.ig-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0}
+.ig-info{flex:1;min-width:120px}
+.ig-handle{font-weight:600;font-size:.88rem}
+.ig-followers{color:var(--text-muted);font-size:.75rem}
+.ig-badge{background:var(--gold);color:#0a0a0a;font-size:.65rem;padding:4px 10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;flex-shrink:0}
 .pricing{text-align:center}
-.price-card{max-width:550px;margin:50px auto 0;padding:50px 40px;border:1px solid rgba(196,162,101,.3);background:var(--dark2);position:relative}
-.price-card::before{content:'PRECIO DE LANZAMIENTO';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0a0a0a;font-size:.7rem;font-weight:700;letter-spacing:3px;padding:6px 24px;white-space:nowrap}
-.price-features{list-style:none;text-align:left;margin:30px 0}
-.price-features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.95rem;display:flex;gap:10px;align-items:center}
-.price-features li .ch{color:var(--gold)}
-.price-amount{margin:30px 0}
-.price-amount .old{font-size:1.2rem;color:var(--text-muted);text-decoration:line-through}
-.price-amount .new{font-family:var(--serif);font-size:3.5rem;font-weight:700;color:var(--gold)}
-.price-amount .usd{font-size:1rem;color:var(--text-muted)}
-
-/* ===== GUARANTEE ===== */
+.price-card{max-width:500px;margin:40px auto 0;padding:40px 30px;border:1px solid rgba(196,162,101,.3);background:var(--dark2);position:relative}
+.price-card::before{content:'PRECIO DE LANZAMIENTO';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0a0a0a;font-size:.6rem;font-weight:700;letter-spacing:3px;padding:5px 18px;white-space:nowrap}
+.price-features{list-style:none;text-align:left;margin:24px 0}
+.price-features li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.88rem;display:flex;gap:10px;align-items:center}
+.price-features li .ch{color:var(--gold);flex-shrink:0}
+.price-amount{margin:24px 0}
+.price-amount .old{font-size:1.1rem;color:var(--text-muted);text-decoration:line-through;display:block;margin-bottom:4px}
+.price-amount .new{font-family:var(--serif);font-size:3rem;font-weight:700;color:var(--gold)}
+.price-amount .usd{font-size:.9rem;color:var(--text-muted)}
+.price-btn{display:block;width:100%;background:var(--gold);color:#0a0a0a;font-family:var(--sans);font-weight:600;font-size:.9rem;padding:16px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;text-align:center}
+.price-btn:hover{background:var(--gold-light)}
+.price-note{color:var(--text-muted);font-size:.75rem;margin-top:14px}
 .guarantee{background:var(--dark2)}
-.guarantee-box{max-width:700px;margin:0 auto;text-align:center;padding:60px 40px;border:1px solid rgba(196,162,101,.15)}
-.guarantee-icon{font-size:3rem;margin-bottom:20px}
-.guarantee-box h3{font-family:var(--serif);font-size:1.6rem;margin-bottom:16px}
-.guarantee-box p{color:var(--text-muted);font-size:.95rem}
-
-/* ===== FINAL CTA ===== */
-.final-cta{text-align:center;padding:120px 20px;background:var(--dark);position:relative}
-.final-cta::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:60px;background:linear-gradient(to bottom,transparent,var(--gold))}
-
-/* ===== FOOTER ===== */
-.footer{text-align:center;padding:40px 20px;border-top:1px solid rgba(255,255,255,.05);color:var(--text-muted);font-size:.8rem}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-.hero-content{grid-template-columns:1fr;text-align:center}
-.hero-text{max-width:100%}
-.hero-label{justify-content:center}
-.hero-highlight{text-align:left}
-.hero-img-wrapper{display:none}
-.diff-grid,.about-grid{grid-template-columns:1fr}
-.pain-grid{grid-template-columns:1fr}
+.guarantee-box{max-width:600px;margin:0 auto;text-align:center;padding:50px 30px;border:1px solid rgba(196,162,101,.15)}
+.guarantee-icon{font-size:2.5rem;margin-bottom:16px}
+.guarantee-box h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:14px}
+.guarantee-box p{color:var(--text-muted);font-size:.9rem}
+.final-cta{text-align:center;padding:100px 20px;position:relative}
+.final-cta::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:50px;background:linear-gradient(to bottom,transparent,var(--gold))}
+.final-cta .section-sub{margin:16px auto 32px;text-align:center}
+.footer{text-align:center;padding:30px 20px;border-top:1px solid rgba(255,255,255,.05);color:var(--text-muted);font-size:.75rem}
+@media(max-width:900px){
+.hero h1{font-size:2.2rem}
+.diff-grid,.about-grid{grid-template-columns:1fr;gap:30px}
+.diff-visual{order:-1}
 .ba-grid{grid-template-columns:1fr 1fr}
-.section{padding:70px 20px}
-.btn{padding:16px 36px;font-size:.9rem}
-.topbar-brand{font-size:.9rem}
 }
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.animate{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+@media(max-width:600px){
+.section{padding:50px 16px}
+.container{padding:0 4px}
+.section-title{font-size:1.5rem}
+.section-sub{font-size:.88rem}
+.topbar{padding:10px 14px}
+.topbar-brand{font-size:.8rem;letter-spacing:1px}
+.topbar-cta{font-size:.6rem;padding:6px 10px;letter-spacing:1px}
+.hero{padding:80px 16px 40px;min-height:auto}
+.hero-bg::after{background:linear-gradient(180deg,rgba(10,10,10,.95) 0%,rgba(10,10,10,.88) 50%,rgba(10,10,10,.7) 100%)}
+.hero h1{font-size:1.7rem}
+.hero-label{font-size:.58rem;letter-spacing:3px}
+.hero-desc{font-size:.88rem}
+.hero-highlight{font-size:.82rem;padding-left:12px}
+.hero-price .new{font-size:1.8rem}
+.hero-price .old{font-size:.88rem}
+.btn{padding:14px 28px;font-size:.78rem;letter-spacing:1.5px;width:100%}
+.pain-grid{grid-template-columns:1fr;gap:12px}
+.pain-card{padding:22px 18px}
+.pain-card h3{font-size:.95rem}
+.pain-card p{font-size:.82rem}
+.diff-grid{gap:24px}
+.diff-visual img{aspect-ratio:4/3}
+.diff-list li{padding:14px 0;gap:12px}
+.diff-list li h4{font-size:.88rem}
+.diff-list li p{font-size:.8rem}
+.ba-grid{grid-template-columns:1fr 1fr;gap:6px}
+.mod-item{gap:12px;padding:18px 0}
+.mod-num{font-size:1.3rem;width:30px}
+.mod-item h3{font-size:.88rem}
+.mod-item p{font-size:.8rem}
+.about-grid{gap:20px}
+.about-img img{aspect-ratio:1/1;object-position:top}
+.about-stats{gap:16px;justify-content:center}
+.stat-num{font-size:1.3rem}
+.stat-label{font-size:.65rem}
+.ig-card{padding:12px 14px;gap:10px}
+.ig-avatar{width:38px;height:38px}
+.ig-handle{font-size:.8rem}
+.ig-followers{font-size:.68rem}
+.ig-badge{font-size:.6rem;padding:3px 8px}
+.price-card{padding:28px 18px;margin-top:28px}
+.price-card::before{font-size:.52rem;padding:4px 12px;letter-spacing:2px}
+.price-features li{font-size:.8rem;padding:7px 0}
+.price-amount .new{font-size:2.2rem}
+.price-btn{padding:14px;font-size:.8rem}
+.guarantee-box{padding:32px 18px}
+.guarantee-box h3{font-size:1.15rem}
+.guarantee-box p{font-size:.82rem}
+.final-cta{padding:60px 16px}
+.final-cta .section-title{font-size:1.4rem}
+}
+@media(max-width:380px){
+.hero h1{font-size:1.5rem}
+.section-title{font-size:1.3rem}
+.ba-grid{grid-template-columns:1fr}
+.topbar-brand{font-size:.72rem}
+.price-amount .new{font-size:2rem}
+}
+.animate{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.16,1,.3,1)}
 .animate.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
-
-<!-- TOPBAR -->
 <nav class="topbar">
-<div class="topbar-brand">FULL FACE <em style="font-family:var(--serif);font-style:italic;color:var(--gold)">Pro</em></div>
+<div class="topbar-brand">FULL FACE <em>Pro</em></div>
 <a href="#precio" class="topbar-cta">Reservar plaza</a>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
-<div class="hero-bg"><img src="img/hero.jpg" alt="Dra. Isadora Araujo"></div>
+<div class="hero-bg"><img src="img/hero.jpg" alt="Dra. Isadora Araujo" loading="eager"></div>
 <div class="hero-content">
 <div class="hero-text">
 <div class="hero-label">Curso online con certificado</div>
 <h1>Domina la armonización facial <em>en la práctica</em></h1>
 <p class="hero-desc">Aprende técnicas reales de relleno con ácido hialurónico, rinomodelación y diseño labial — directamente desde el consultorio de la Dra. Isadora Araujo.</p>
 <p class="hero-highlight">Sin slides. Sin teoría interminable. Solo práctica real con pacientes reales, paso a paso.</p>
-<div class="hero-price">
-<span class="old">$297</span>
-<span class="currency">USD</span>
-<span class="new">$97</span>
-</div>
+<div class="hero-price"><span class="old">$297</span><span class="currency">USD</span><span class="new">$97</span></div>
 <a href="#precio" class="btn">Reservar mi plaza</a>
-</div>
-<div class="hero-img-wrapper">
 </div>
 </div>
 </section>
-
-<!-- PAIN POINTS -->
 <section class="section pain">
 <div class="container">
 <span class="tag">El problema</span>
 <h2 class="section-title">¿Te identificas con <span class="gold">alguna</span> de estas situaciones?</h2>
 <div class="pain-grid">
-<div class="pain-card animate">
-<div class="icon">&#9670;</div>
-<h3>Inseguridad al aplicar</h3>
-<p>Ya estudiaste la teoría, pero a la hora de tomar la jeringa frente al paciente, las dudas aparecen. No sabes exactamente dónde, cuánto ni a qué profundidad.</p>
-</div>
-<div class="pain-card animate">
-<div class="icon">&#9670;</div>
-<h3>Cursos llenos de slides</h3>
-<p>Pagaste por cursos que prometían práctica, pero recibiste horas de PowerPoint, anatomía de libro y poca — o ninguna — demostración real.</p>
-</div>
-<div class="pain-card animate">
-<div class="icon">&#9670;</div>
-<h3>Resultados artificiales</h3>
-<p>No logras conseguir ese equilibrio natural. Tus rellenos quedan asimétricos, exagerados o simplemente no se ven como esperabas.</p>
-</div>
-<div class="pain-card animate">
-<div class="icon">&#9670;</div>
-<h3>Miedo a complicaciones</h3>
-<p>El temor a una reacción adversa, una oclusión vascular o un resultado desastroso te paraliza y limita los procedimientos que ofreces.</p>
-</div>
+<div class="pain-card animate"><div class="icon">&#9670;</div><h3>Inseguridad al aplicar</h3><p>Ya estudiaste la teoría, pero a la hora de tomar la jeringa frente al paciente, las dudas aparecen. No sabes exactamente dónde, cuánto ni a qué profundidad.</p></div>
+<div class="pain-card animate"><div class="icon">&#9670;</div><h3>Cursos llenos de slides</h3><p>Pagaste por cursos que prometían práctica, pero recibiste horas de PowerPoint, anatomía de libro y poca — o ninguna — demostración real.</p></div>
+<div class="pain-card animate"><div class="icon">&#9670;</div><h3>Resultados artificiales</h3><p>No logras conseguir ese equilibrio natural. Tus rellenos quedan asimétricos, exagerados o simplemente no se ven como esperabas.</p></div>
+<div class="pain-card animate"><div class="icon">&#9670;</div><h3>Miedo a complicaciones</h3><p>El temor a una reacción adversa, una oclusión vascular o un resultado desastroso te paraliza y limita los procedimientos que ofreces.</p></div>
 </div>
 </div>
 </section>
-
-<!-- DIFFERENTIATOR -->
 <section class="section diff">
 <div class="container">
 <div class="diff-grid">
-<div class="diff-visual animate">
-<img src="img/clinic.jpg" alt="Dra. Isadora en Biovida Espaço Clínico">
-</div>
+<div class="diff-visual animate"><img src="img/clinic.jpg" alt="Dra. Isadora en Biovida Espaço Clínico" loading="lazy"></div>
 <div>
 <span class="tag">Lo que nos hace diferentes</span>
 <h2 class="section-title">Esto no es otro curso <span class="gold">teórico</span></h2>
-<p class="section-sub" style="margin-bottom:30px">Full Face Pro fue grabado 100% dentro del consultorio. Cada técnica la ves aplicada en pacientes reales, explicada paso a paso por la Dra. Isadora mientras trabaja.</p>
+<p class="section-sub" style="margin-bottom:24px">Full Face Pro fue grabado 100% dentro del consultorio. Cada técnica la ves aplicada en pacientes reales, explicada paso a paso por la Dra. Isadora mientras trabaja.</p>
 <ul class="diff-list">
-<li>
-<span class="check">&#10003;</span>
-<div><h4>Cámara en el consultorio</h4><p>Ves exactamente el ángulo de la aguja, la presión, la cantidad de producto. Como si estuvieras ahí.</p></div>
-</li>
-<li>
-<span class="check">&#10003;</span>
-<div><h4>Explica mientras aplica</h4><p>No es un video editado con narración encima. Es la Dra. Isadora hablando en tiempo real mientras ejecuta.</p></div>
-</li>
-<li>
-<span class="check">&#10003;</span>
-<div><h4>Casos variados</h4><p>Pacientes reales con anatomías diferentes. Mujeres, hombres, narices, labios, línea mandibular.</p></div>
-</li>
-<li>
-<span class="check">&#10003;</span>
-<div><h4>Aplica mañana</h4><p>Lo que aprendes hoy lo puedes replicar en tu consultorio mañana. Sin vueltas.</p></div>
-</li>
+<li><span class="check">&#10003;</span><div><h4>Cámara en el consultorio</h4><p>Ves exactamente el ángulo de la aguja, la presión, la cantidad de producto. Como si estuvieras ahí.</p></div></li>
+<li><span class="check">&#10003;</span><div><h4>Explica mientras aplica</h4><p>No es un video editado con narración encima. Es la Dra. Isadora hablando en tiempo real mientras ejecuta.</p></div></li>
+<li><span class="check">&#10003;</span><div><h4>Casos variados</h4><p>Pacientes reales con anatomías diferentes. Mujeres, hombres, narices, labios, línea mandibular.</p></div></li>
+<li><span class="check">&#10003;</span><div><h4>Aplica mañana</h4><p>Lo que aprendes hoy lo puedes replicar en tu consultorio mañana. Sin vueltas.</p></div></li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-
-<!-- RESULTS / BEFORE & AFTER -->
 <section class="section results">
 <div class="container">
 <span class="tag">Resultados reales</span>
 <h2 class="section-title">Transformaciones realizadas por la <span class="gold">Dra. Isadora</span></h2>
 <p class="section-sub">Cada imagen es un caso real. Estas son las técnicas que aprenderás a dominar en Full Face Pro.</p>
 <div class="ba-grid">
-<img src="img/ba1.jpg" alt="Antes y después - Armonización facial" class="animate">
-<img src="img/ba2.jpg" alt="Antes y después - Rinomodelación" class="animate">
-<img src="img/ba3.jpg" alt="Antes y después - Rinomodelación" class="animate">
-<img src="img/ba5.jpg" alt="Antes y después - Armonización facial" class="animate">
-<img src="img/ba6.jpg" alt="Antes y después - Rinomodelación" class="animate">
-<img src="img/ba7.jpg" alt="Antes y después - Rinomodelación masculina" class="animate">
+<img src="img/ba1.jpg" alt="Antes y después - Armonización facial" class="animate" loading="lazy">
+<img src="img/ba2.jpg" alt="Antes y después - Rinomodelación" class="animate" loading="lazy">
+<img src="img/ba3.jpg" alt="Antes y después - Rinomodelación" class="animate" loading="lazy">
+<img src="img/ba5.jpg" alt="Antes y después - Armonización facial" class="animate" loading="lazy">
+<img src="img/ba6.jpg" alt="Antes y después - Rinomodelación" class="animate" loading="lazy">
+<img src="img/ba7.jpg" alt="Antes y después - Rinomodelación masculina" class="animate" loading="lazy">
 </div>
 </div>
 </section>
-
-<!-- MODULES -->
 <section class="section modules">
 <div class="container">
 <span class="tag">Contenido del curso</span>
 <h2 class="section-title">Lo que vas a <span class="gold">dominar</span></h2>
 <p class="section-sub">Una formación completa y progresiva, enfocada 100% en la ejecución práctica.</p>
 <div class="modules-list">
-<div class="mod-item animate">
-<span class="mod-num">01</span>
-<div>
-<h3>Evaluación facial y planificación</h3>
-<p>Cómo analizar cada rostro, identificar las áreas de intervención y crear un plan de tratamiento personalizado antes de tocar la jeringa.</p>
-</div>
-</div>
-<div class="mod-item animate">
-<span class="mod-num">02</span>
-<div>
-<h3>Relleno labial — técnicas avanzadas</h3>
-<p>Russian Lips, técnica de abanico, cánula vs aguja, corrección de asimetrías. Todo en pacientes reales con diferentes anatomías labiales.</p>
-</div>
-</div>
-<div class="mod-item animate">
-<span class="mod-num">03</span>
-<div>
-<h3>Rinomodelación sin cirugía</h3>
-<p>Cómo corregir el dorso, levantar la punta y afinar el perfil usando ácido hialurónico. Puntos de inyección, volumen exacto y zonas de riesgo.</p>
-</div>
-</div>
-<div class="mod-item animate">
-<span class="mod-num">04</span>
-<div>
-<h3>Línea mandibular y mentón</h3>
-<p>Definición del ángulo mandibular, proyección del mentón y efecto lifting. La diferencia entre un relleno que rejuvenece y uno que pesa.</p>
-</div>
-</div>
-<div class="mod-item animate">
-<span class="mod-num">05</span>
-<div>
-<h3>Pómulos y surcos nasogenianos</h3>
-<p>Reposición volumétrica, técnica de sustentación, corrección de ojeras con cánula. Resultados naturales sin aspecto hinchado.</p>
-</div>
-</div>
-<div class="mod-item animate">
-<span class="mod-num">06</span>
-<div>
-<h3>Manejo de complicaciones</h3>
-<p>Qué hacer si algo sale mal. Protocolo de oclusión vascular, manejo de nódulos, equimosis y reacciones adversas. Tu seguridad y la del paciente.</p>
-</div>
-</div>
+<div class="mod-item animate"><span class="mod-num">01</span><div><h3>Evaluación facial y planificación</h3><p>Cómo analizar cada rostro, identificar las áreas de intervención y crear un plan de tratamiento personalizado antes de tocar la jeringa.</p></div></div>
+<div class="mod-item animate"><span class="mod-num">02</span><div><h3>Relleno labial — técnicas avanzadas</h3><p>Russian Lips, técnica de abanico, cánula vs aguja, corrección de asimetrías. Todo en pacientes reales con diferentes anatomías labiales.</p></div></div>
+<div class="mod-item animate"><span class="mod-num">03</span><div><h3>Rinomodelación sin cirugía</h3><p>Cómo corregir el dorso, levantar la punta y afinar el perfil usando ácido hialurónico. Puntos de inyección, volumen exacto y zonas de riesgo.</p></div></div>
+<div class="mod-item animate"><span class="mod-num">04</span><div><h3>Línea mandibular y mentón</h3><p>Definición del ángulo mandibular, proyección del mentón y efecto lifting. La diferencia entre un relleno que rejuvenece y uno que pesa.</p></div></div>
+<div class="mod-item animate"><span class="mod-num">05</span><div><h3>Pómulos y surcos nasogenianos</h3><p>Reposición volumétrica, técnica de sustentación, corrección de ojeras con cánula. Resultados naturales sin aspecto hinchado.</p></div></div>
+<div class="mod-item animate"><span class="mod-num">06</span><div><h3>Manejo de complicaciones</h3><p>Qué hacer si algo sale mal. Protocolo de oclusión vascular, manejo de nódulos, equimosis y reacciones adversas. Tu seguridad y la del paciente.</p></div></div>
 </div>
 </div>
 </section>
-
-<!-- ABOUT -->
 <section class="section about">
 <div class="container">
 <div class="about-grid">
@@ -322,29 +258,22 @@ a{color:var(--gold);text-decoration:none}
 <h2 class="section-title">Dra. Isadora <span class="gold">Araujo</span></h2>
 <div class="divider"></div>
 <p class="section-sub">Cirujana Dentista especialista en Armonización Orofacial. Con registro profesional CRO/GO 21446, la Dra. Isadora combina conocimiento técnico avanzado con una visión artística del rostro.</p>
-<p class="section-sub" style="margin-top:16px">Fundadora de la Clínica Biovida Espaço Clínico, ha transformado cientos de rostros con resultados naturales y armónicos. Ahora comparte sus técnicas exactas — las mismas que aplica todos los días — en un curso 100% práctico.</p>
+<p class="section-sub" style="margin-top:14px">Fundadora de la Clínica Biovida Espaço Clínico, ha transformado cientos de rostros con resultados naturales y armónicos. Ahora comparte sus técnicas exactas — las mismas que aplica todos los días — en un curso 100% práctico.</p>
 <div class="about-stats">
 <div class="stat"><div class="stat-num">10.6k</div><div class="stat-label">Seguidores</div></div>
 <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Pacientes</div></div>
 <div class="stat"><div class="stat-num">518</div><div class="stat-label">Publicaciones</div></div>
 </div>
 <div class="ig-card">
-<img class="ig-avatar" src="img/about.jpg" alt="Dra. Isadora Araujo">
-<div class="ig-info">
-<div class="ig-handle">@dra.isaadoraaraujo</div>
-<div class="ig-followers">Cirujana Dentista &bull; Armonización Facial &bull; 10.6k seguidores</div>
-</div>
-<a href="https://www.instagram.com/dra.isaadoraaraujo/" target="_blank" class="ig-badge">Seguir</a>
+<img class="ig-avatar" src="img/about.jpg" alt="Dra. Isadora Araujo" loading="lazy">
+<div class="ig-info"><div class="ig-handle">@dra.isaadoraaraujo</div><div class="ig-followers">Cirujana Dentista &bull; Armonización Facial &bull; 10.6k seguidores</div></div>
+<a href="https://www.instagram.com/dra.isaadoraaraujo/" target="_blank" rel="noopener" class="ig-badge">Seguir</a>
 </div>
 </div>
-<div class="about-img animate">
-<img src="img/about.jpg" alt="Dra. Isadora Araujo">
-</div>
+<div class="about-img animate"><img src="img/about.jpg" alt="Dra. Isadora Araujo" loading="lazy"></div>
 </div>
 </div>
 </section>
-
-<!-- PRICING -->
 <section class="section pricing" id="precio">
 <div class="container">
 <span class="tag">Inversión</span>
@@ -362,17 +291,15 @@ a{color:var(--gold);text-decoration:none}
 <li><span class="ch">&#10003;</span> Certificado de finalización</li>
 </ul>
 <div class="price-amount">
-<div class="old">$297 USD</div>
+<span class="old">$297 USD</span>
 <div><span class="new">$97</span> <span class="usd">USD</span></div>
 </div>
-<p style="color:var(--text-muted);font-size:.85rem;margin-bottom:24px">El importe se ajustará a tu moneda local al momento de pagar.</p>
-<a href="#" class="btn" style="width:100%;text-align:center;display:block">Quiero acceder ahora</a>
-<p style="color:var(--text-muted);font-size:.78rem;margin-top:16px">&#128274; Pago 100% seguro &bull; Garantía de 7 días</p>
+<p style="color:var(--text-muted);font-size:.8rem;margin-bottom:20px">El importe se ajustará a tu moneda local al momento de pagar.</p>
+<a href="#" class="price-btn">Quiero acceder ahora</a>
+<p class="price-note">&#128274; Pago 100% seguro &bull; Garantía de 7 días</p>
 </div>
 </div>
 </section>
-
-<!-- GUARANTEE -->
 <section class="section guarantee">
 <div class="guarantee-box animate">
 <div class="guarantee-icon">&#128170;</div>
@@ -380,24 +307,19 @@ a{color:var(--gold);text-decoration:none}
 <p>Si dentro de los primeros 7 días sientes que el curso no es para ti, te devolvemos el 100% de tu dinero. Sin preguntas, sin complicaciones. El riesgo es cero.</p>
 </div>
 </section>
-
-<!-- FINAL CTA -->
 <section class="final-cta">
 <span class="tag">Últimas plazas</span>
-<h2 class="section-title" style="margin-top:20px">¿Vas a seguir aprendiendo con <span class="gold">slides</span>?</h2>
-<p class="section-sub" style="margin:20px auto 40px;text-align:center">O vas a aprender viendo a una especialista real, aplicando en pacientes reales, en su consultorio real.</p>
-<a href="#precio" class="btn">Reservar mi plaza — $97 USD</a>
+<h2 class="section-title" style="margin-top:16px">¿Vas a seguir aprendiendo con <span class="gold">slides</span>?</h2>
+<p class="section-sub">O vas a aprender viendo a una especialista real, aplicando en pacientes reales, en su consultorio real.</p>
+<a href="#precio" class="btn" style="max-width:400px">Reservar mi plaza — $97 USD</a>
 </section>
-
-<!-- FOOTER -->
 <footer class="footer">
 <p>Full Face Pro &mdash; by Dra. Isadora Araujo &bull; CRO/GO 21446</p>
-<p style="margin-top:6px">Formación profesional en armonización facial. Todos los derechos reservados.</p>
+<p style="margin-top:4px">Formación profesional en armonización facial. Todos los derechos reservados.</p>
 </footer>
-
 <script>
-const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});
-document.querySelectorAll('.animate').forEach(el=>obs.observe(el));
+var o=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting){i.target.classList.add('visible');o.unobserve(i.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.animate').forEach(function(el){o.observe(el)});
 </script>
 </body>
 </html>
