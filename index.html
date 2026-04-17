@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="description" content="Full Face Pro — Curso online de armonización facial con la Dra. Isadora Araujo. Odontóloga, +13 cursos especializados, posgrado AOF. Clases 100% prácticas desde el consultorio.">
+<meta name="description" content="Full Face Pro — Curso online de armonización facial con la Dra. Isadora Araujo. Odontóloga, +21 cursos especializados, posgrado AOF. Clases 100% prácticas desde el consultorio.">
 <title>Full Face Pro — Dra. Isadora Araujo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -893,6 +893,126 @@ footer a:hover { color: var(--gold); }
   .title { font-size: 28px; }
 }
 
+/* ===== INSTAGRAM BADGE ===== */
+.ig-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: border-color 0.25s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  max-width: 420px;
+}
+
+.ig-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(131,58,180,0.08), rgba(253,29,29,0.06), rgba(252,176,69,0.08));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ig-badge:hover::before { opacity: 1; }
+.ig-badge:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-1px); }
+
+.ig-avatar {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.ig-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  animation: ig-spin 3s linear infinite;
+  z-index: 0;
+}
+
+@keyframes ig-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ig-avatar-inner {
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  z-index: 1;
+}
+
+.ig-info { flex: 1; min-width: 0; }
+
+.ig-handle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.ig-verified {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: #1877F2;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  animation: ig-pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes ig-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(24,119,242,0.5); }
+  50% { box-shadow: 0 0 0 5px rgba(24,119,242,0); }
+}
+
+.ig-stats {
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 3px;
+}
+
+.ig-bio {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ig-arrow {
+  font-size: 18px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.ig-badge:hover .ig-arrow { transform: translateX(4px); }
+
 /* SMALL MOBILE */
 @media (max-width: 380px) {
   .hero h1 { font-size: 30px; }
@@ -918,11 +1038,11 @@ footer a:hover { color: var(--gold); }
       <div class="hero-badge">Curso Online com Certificado</div>
       <h1>Domina la<br>armonización<br>facial <em>en la práctica</em></h1>
       <p class="hero-sub">
-        Aprende directamente con la <strong>Dra. Isadora Araujo</strong> — odontóloga, posgrado en armonización orofacial, más de <strong>13 cursos especializados</strong>. Sin enrolación. Solo lo que realmente necesitas ver.
+        Aprende directamente con la <strong>Dra. Isadora Araujo</strong> — odontóloga, posgrado en armonización orofacial, más de <strong>21 cursos especializados</strong>. Sin enrolación. Solo lo que realmente necesitas ver.
       </p>
       <div class="authority-tags">
         <span class="atag">Odontóloga</span>
-        <span class="atag">+13 Cursos</span>
+        <span class="atag">+21 Cursos</span>
         <span class="atag">Posgrado AOF</span>
         <span class="atag">100% Práctico</span>
       </div>
@@ -955,32 +1075,46 @@ footer a:hover { color: var(--gold); }
       </div>
       <div>
         <div class="dr-name">Dra. Isadora Araujo</div>
-        <div class="dr-title">Cirujana Dentista · Especialista en Armonización Orofacial · CRO/GO 21446</div>
+        <div class="dr-title">Cirujana Dentista · <strong style="color:var(--gold)">Expert</strong> en Armonización Orofacial · CRO/GO 21446</div>
         <p class="dr-bio">
-          Fundadora de la <strong>Clínica Biovida Espaço Clínico</strong>, la Dra. Isadora Araujo es referencia en armonización facial en Brasil. Odontóloga con posgrado en Armonización Orofacial y <strong>más de 13 cursos especializados</strong> en el área.
+          Fundadora de la <strong>Clínica Biovida Espaço Clínico</strong>, la Dra. Isadora Araujo es referencia en armonización facial en Brasil. Odontóloga con posgrado en Armonización Orofacial y <strong>más de 21 cursos especializados</strong> en el área.
         </p>
         <p class="dr-bio">
           En Full Face Pro, ella no te da slides ni teoría de libro. Ella te muestra <strong>exactamente lo que hace</strong> — cámara dentro del consultorio, paciente real, explicando en tiempo real mientras aplica. Directo al punto.
         </p>
         <div class="creds">
           <div class="cred">
-            <div class="cred-num">+13</div>
+            <div class="cred-num">+21</div>
             <div class="cred-label">Cursos especializados</div>
           </div>
           <div class="cred">
-            <div class="cred-num">500+</div>
+            <div class="cred-num">18.8k</div>
             <div class="cred-label">Pacientes atendidos</div>
           </div>
           <div class="cred">
             <div class="cred-num">10.6k</div>
-            <div class="cred-label">@dra.isaadoraaraujo</div>
+            <div class="cred-label">Seguidores no Instagram</div>
           </div>
           <div class="cred">
             <div class="cred-num">100%</div>
             <div class="cred-label">Práctico, sin enrolación</div>
           </div>
         </div>
-        <a href="#comprar" class="cta-primary" style="max-width: 360px;">QUIERO APRENDER CON ELLA →</a>
+        <!-- INSTAGRAM BADGE -->
+      <a href="https://www.instagram.com/dra.isaadoraaraujo/" target="_blank" rel="noopener" class="ig-badge">
+        <div class="ig-avatar">
+          <div class="ig-ring"></div>
+          <div class="ig-avatar-inner">IA</div>
+        </div>
+        <div class="ig-info">
+          <div class="ig-handle">@dra.isaadoraaraujo <span class="ig-verified">✓</span></div>
+          <div class="ig-stats">10,6 mil seguidores &nbsp;·&nbsp; 518 publicações</div>
+          <div class="ig-bio">Revelo sua melhor versão com harmonização facial!</div>
+        </div>
+        <div class="ig-arrow">→</div>
+      </a>
+
+      <a href="#comprar" class="cta-primary" style="max-width: 360px;">QUIERO APRENDER CON ELLA →</a>
       </div>
     </div>
   </div>
@@ -1176,7 +1310,7 @@ footer a:hover { color: var(--gold); }
 <section class="testimonials-section section">
   <div class="container">
     <span class="label">Lo que dicen</span>
-    <h2 class="title">Más de <em>500 profesionales</em><br>ya transformaron su práctica</h2>
+    <h2 class="title">Más de <em>18.800 profesionales</em><br>ya transformaron su práctica</h2>
     <div class="testimonials-grid">
       <div class="testi-card">
         <div class="stars">★★★★★</div>
@@ -1266,7 +1400,7 @@ footer a:hover { color: var(--gold); }
     <h2>¿Vas a seguir aprendiendo<br>con slides?</h2>
     <p>O vas a aprender viendo a una especialista real, aplicando en pacientes reales, en su consultorio real.</p>
     <a href="#comprar" class="cta-primary">▶ RESERVAR MI PLAZA — $97 USD</a>
-    <p class="price-note">🔒 Pago seguro &nbsp;·&nbsp; Garantía 7 días &nbsp;·&nbsp; Acceso inmediato</p>
+    <p class="price-note">🔒 Pago seguro &nbsp;·&nbsp; Garantía 30 días &nbsp;·&nbsp; Acceso inmediato</p>
   </div>
 </section>
 
