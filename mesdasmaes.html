@@ -392,6 +392,11 @@ a { color: inherit; text-decoration: none; }
 }
 .combo-ba {
   width: 100%;
+  margin-bottom: 24px;
+  position: relative;
+}
+.combo-ba-placeholder {
+  width: 100%;
   height: 200px;
   background: #141414;
   border: 1px dashed rgba(201,168,76,0.2);
@@ -399,7 +404,6 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
   color: #444;
   font-size: 12px;
   text-align: center;
@@ -407,7 +411,50 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.combo-ba span { font-size: 28px; opacity: 0.4; }
+.combo-ba-placeholder span { font-size: 28px; opacity: 0.4; }
+.combo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.combo-gallery-main {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+.combo-gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.combo-gallery-thumbs::-webkit-scrollbar { display: none; }
+.combo-gallery-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, border 0.2s;
+  border: 2px solid transparent;
+  flex-shrink: 0;
+}
+.combo-gallery-thumb:hover,
+.combo-gallery-thumb.active {
+  opacity: 1;
+  border-color: var(--gold);
+}
+.combo-gallery-label {
+  font-size: 11px;
+  color: var(--gray);
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-top: 4px;
+}
 .combo-price-block {
   margin-bottom: 24px;
   padding-top: 20px;
@@ -796,8 +843,16 @@ footer a:hover { color: var(--gold); }
         <p class="combo-desc">Um combo pensado para iluminar a beleza radiante das mães. Suaviza as rugas de expressão e realça os lábios com naturalidade e elegância — tudo em uma única visita.</p>
         <div class="combo-gift">🎁 Brinde: Peeling de Retinóico incluso</div>
         <div class="combo-ba">
-          <span>📸</span>
-          Fotos Antes e Depois<br>em breve aqui
+          <div class="combo-gallery">
+            <img class="combo-gallery-main" id="gal-essencia-main" src="img/combos/essencia_de_mae/essencia1.png" alt="Antes e Depois - Essência de Mãe" loading="lazy">
+            <div class="combo-gallery-thumbs">
+              <img class="combo-gallery-thumb active" src="img/combos/essencia_de_mae/essencia1.png" onclick="setMain('gal-essencia-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/essencia_de_mae/essencia2.png" onclick="setMain('gal-essencia-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/essencia_de_mae/essencia3.png" onclick="setMain('gal-essencia-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/essencia_de_mae/essencia4.webp" onclick="setMain('gal-essencia-main',this)" alt="">
+            </div>
+            <div class="combo-gallery-label">Resultados Reais · Antes e Depois</div>
+          </div>
         </div>
         <div class="combo-price-block">
           <div class="combo-installment-label">Parcele em até</div>
@@ -813,8 +868,16 @@ footer a:hover { color: var(--gold); }
         <div class="combo-treatment">Preenchimento Labial — 1ml</div>
         <p class="combo-desc">Lábios mais hidratados, com volume na medida certa e um sorriso mais bonito. O toque de elegância que faz toda a diferença — para você mesma.</p>
         <div class="combo-ba">
-          <span>📸</span>
-          Fotos Antes e Depois<br>em breve aqui
+          <div class="combo-gallery">
+            <img class="combo-gallery-main" id="gal-lips-main" src="img/combos/perfect_lips/pl1.webp" alt="Antes e Depois - Perfect Lips" loading="lazy">
+            <div class="combo-gallery-thumbs">
+              <img class="combo-gallery-thumb active" src="img/combos/perfect_lips/pl1.webp" onclick="setMain('gal-lips-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/perfect_lips/pl2.webp" onclick="setMain('gal-lips-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/perfect_lips/pl3.png" onclick="setMain('gal-lips-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/perfect_lips/pl4.png" onclick="setMain('gal-lips-main',this)" alt="">
+            </div>
+            <div class="combo-gallery-label">Resultados Reais · Antes e Depois</div>
+          </div>
         </div>
         <div class="combo-price-block">
           <div class="combo-installment-label">Parcele em até</div>
@@ -830,8 +893,16 @@ footer a:hover { color: var(--gold); }
         <div class="combo-treatment">Botox Terço Médio — Testa, Braço e Pés de Galinha</div>
         <p class="combo-desc">Diga adeus às rugas e linhas de expressão. Utilizamos a toxina <strong style="color: var(--white);">Letybo</strong> (60 unidades), considerada uma das melhores do mercado, para um resultado duradouro e completamente natural.</p>
         <div class="combo-ba">
-          <span>📸</span>
-          Fotos Antes e Depois<br>em breve aqui
+          <div class="combo-gallery">
+            <img class="combo-gallery-main" id="gal-smooth-main" src="img/combos/smooth_skin/ss1.jpg" alt="Antes e Depois - Smooth Skin" loading="lazy">
+            <div class="combo-gallery-thumbs">
+              <img class="combo-gallery-thumb active" src="img/combos/smooth_skin/ss1.jpg" onclick="setMain('gal-smooth-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/smooth_skin/ss2.jpg" onclick="setMain('gal-smooth-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/smooth_skin/ss3.png" onclick="setMain('gal-smooth-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/smooth_skin/ss4.webp" onclick="setMain('gal-smooth-main',this)" alt="">
+            </div>
+            <div class="combo-gallery-label">Resultados Reais · Antes e Depois</div>
+          </div>
         </div>
         <div class="combo-price-block">
           <div class="combo-installment-label">Parcele em até</div>
@@ -881,8 +952,16 @@ footer a:hover { color: var(--gold); }
         <div class="combo-treatment">3 mls de Ácido Hialurônico — Região à sua escolha</div>
         <p class="combo-desc">Você decide onde aplicar para realçar seus melhores traços. Uma transformação sutil e elegante que harmoniza seu rosto e revela a sua melhor versão.</p>
         <div class="combo-ba">
-          <span>📸</span>
-          Fotos Antes e Depois<br>em breve aqui
+          <div class="combo-gallery">
+            <img class="combo-gallery-main" id="gal-3mls-main" src="img/combos/combo_3mls/c3mls1.jpg" alt="Antes e Depois - Combo 3mls" loading="lazy">
+            <div class="combo-gallery-thumbs">
+              <img class="combo-gallery-thumb active" src="img/combos/combo_3mls/c3mls1.jpg" onclick="setMain('gal-3mls-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/combo_3mls/c3mls2.png" onclick="setMain('gal-3mls-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/combo_3mls/c3mls3.png" onclick="setMain('gal-3mls-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/combo_3mls/c3mls4.png" onclick="setMain('gal-3mls-main',this)" alt="">
+            </div>
+            <div class="combo-gallery-label">Resultados Reais · Antes e Depois</div>
+          </div>
         </div>
         <div class="combo-price-block">
           <div class="combo-installment-label">Parcele em até</div>
@@ -899,8 +978,17 @@ footer a:hover { color: var(--gold); }
         <div class="combo-treatment">Harmonização Full Face — 6 mls ou mais</div>
         <p class="combo-desc">A transformação completa que você merece. Uma harmonização facial 100% personalizada para rejuvenescer e embelezar todo o seu rosto com naturalidade e resultado duradouro.</p>
         <div class="combo-ba">
-          <span>📸</span>
-          Fotos Antes e Depois<br>em breve aqui
+          <div class="combo-gallery">
+            <img class="combo-gallery-main" id="gal-pp-main" src="img/combos/perfect_plus/pp1.png" alt="Antes e Depois - Perfect Plus" loading="lazy">
+            <div class="combo-gallery-thumbs">
+              <img class="combo-gallery-thumb active" src="img/combos/perfect_plus/pp1.png" onclick="setMain('gal-pp-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/perfect_plus/pp2.png" onclick="setMain('gal-pp-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/perfect_plus/pp3.png" onclick="setMain('gal-pp-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/perfect_plus/pp4.png" onclick="setMain('gal-pp-main',this)" alt="">
+              <img class="combo-gallery-thumb" src="img/combos/perfect_plus/pp5.png" onclick="setMain('gal-pp-main',this)" alt="">
+            </div>
+            <div class="combo-gallery-label">Resultados Reais · Antes e Depois</div>
+          </div>
         </div>
         <div class="combo-price-block">
           <div class="combo-installment-label">Parcele em até</div>
@@ -916,8 +1004,13 @@ footer a:hover { color: var(--gold); }
         <div class="combo-treatment">Pele de Boneca + Bioestimulador ELLEVA</div>
         <p class="combo-desc">A combinação perfeita: o protocolo de superfície (Pele de Boneca) com a estimulação profunda de colágeno (Elleva). Rejuvenescimento de dentro para fora e de fora para dentro.</p>
         <div class="combo-ba">
-          <span>📸</span>
-          Fotos Antes e Depois<br>em breve aqui
+          <div class="combo-gallery">
+            <img class="combo-gallery-main" id="gal-bio-main" src="img/combos/bioestimulador/bio1.webp" alt="Antes e Depois - Bioestimulador" loading="lazy">
+            <div class="combo-gallery-thumbs">
+              <img class="combo-gallery-thumb active" src="img/combos/bioestimulador/bio1.webp" onclick="setMain('gal-bio-main',this)" alt="">
+            </div>
+            <div class="combo-gallery-label">Resultados Reais · Antes e Depois</div>
+          </div>
         </div>
         <div class="combo-price-block">
           <div class="combo-installment-label">Parcele em até</div>
@@ -1064,6 +1157,16 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
     if (!isOpen) item.classList.add('open');
   });
 });
+
+// Gallery setMain
+function setMain(mainId, thumb) {
+  const main = document.getElementById(mainId);
+  if (!main) return;
+  main.src = thumb.src;
+  const thumbs = thumb.parentElement.querySelectorAll('.combo-gallery-thumb');
+  thumbs.forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
 </script>
 
 </body>
