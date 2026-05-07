@@ -83,6 +83,8 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(to right, var(--black) 0%, transparent 30%);
   pointer-events: none;
 }
+.hero-right--mobile { display: none; }
+.hero-right--desktop { display: block; }
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -582,12 +584,56 @@ footer a:hover { color: var(--gold); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-right { height: 55vw; max-height: 420px; }
-  .hero-right::after { background: linear-gradient(to top, var(--black) 0%, transparent 40%); }
-  .hero-left { padding: 48px 24px 40px; }
+  /* HERO MOBILE: foto no topo, texto embaixo */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-right--mobile { display: block; }
+  .hero-right--desktop { display: none; }
+  .hero-right {
+    position: relative;
+    height: 75vw;
+    max-height: 480px;
+    width: 100%;
+  }
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .hero-right::after {
+    background: linear-gradient(to top, var(--black) 10%, transparent 60%);
+  }
+  .hero-left {
+    padding: 32px 24px 48px;
+    background: var(--black);
+    margin-top: -2px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 9vw, 52px);
+  }
+  .hero-sub {
+    font-size: 15px;
+  }
+  .authority-tags {
+    gap: 6px;
+  }
+  .atag {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  .trust-row {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+  }
   .authority-wrap { grid-template-columns: 1fr; gap: 36px; }
-  .authority-photo-wrap img { aspect-ratio: 4/3; }
+  .authority-photo-wrap img { aspect-ratio: 3/4; object-fit: cover; }
   .section { padding: 56px 16px; }
   .combos-grid { grid-template-columns: 1fr; }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
@@ -624,6 +670,9 @@ footer a:hover { color: var(--gold); }
 <!-- HERO -->
 <div style="background: var(--black);">
   <div class="hero">
+    <div class="hero-right hero-right--mobile">
+      <img src="img/hero.jpg" alt="Dra. Isadora Araujo — Campanha Mês das Mães">
+    </div>
     <div class="hero-left">
       <div class="hero-badge">CAMPANHA EXCLUSIVA · MÊS DAS MÃES</div>
       <h1>Sua melhor<br>versão começa<br><em>aqui</em></h1>
@@ -637,14 +686,13 @@ footer a:hover { color: var(--gold); }
         <span class="atag">Dra. Isadora Araujo</span>
         <span class="atag">CRO/GO 21446</span>
       </div>
-      <a href="#combos" class="cta-primary">▶ VER COMBOS ESPECIAIS</a>
       <div class="trust-row">
         <span>🔒 Pagamento seguro</span>
         <span>✓ Parcele em até 12x</span>
         <span>📍 Goiânia - GO e São Luís dos Montes Belos</span>
       </div>
     </div>
-    <div class="hero-right">
+    <div class="hero-right hero-right--desktop">
       <img src="img/hero.jpg" alt="Dra. Isadora Araujo — Campanha Mês das Mães">
     </div>
   </div>
